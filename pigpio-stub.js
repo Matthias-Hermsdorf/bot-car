@@ -1,12 +1,17 @@
 class Gpio {
-    servoWrite() {
-        console.log("Gpio Stub servoWrite")
+    constructor(pin,options) {
+        this.pin = pin;
+        this.options = options;
     }
-    digitalWrite() {
-        console.log("Gpio Stub digitalWrite")
+
+    servoWrite(...args) {
+        console.log("Gpio Stub servoWrite pin:"+this.pin,args)
     }
-    pwmWrite() {
-        console.log("Gpio Stub pwmWrite")
+    digitalWrite(...args) {
+        console.log("Gpio Stub digitalWrite pin:"+this.pin,args)
+    }
+    pwmWrite(...args) {
+        console.log("Gpio Stub pwmWrite pin:"+this.pin,args)
     }
 }
 
