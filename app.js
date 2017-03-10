@@ -4,6 +4,7 @@ var path = require('path');
 var fs = require('fs');
 var app = koa();
 var car = require('./car-trike-drive');
+require('./connect-market')
 if ((process.argv.indexOf("servo") > -1)) {
     car = require('./car-servo-drive');
 } else {
@@ -66,6 +67,6 @@ app.io.route('reboot', function* () {
 });
 
 
-console.log("listening on :4002");
+console.log("bot-car is listening on :4002");
 app.listen(4002);
 
