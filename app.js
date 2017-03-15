@@ -4,7 +4,7 @@ var path = require('path');
 var fs = require('fs');
 var app = koa();
 var car = require('./car-trike-drive');
-require('./connect-market')
+require('./connect-market');
 if ((process.argv.indexOf("servo") > -1)) {
     car = require('./car-servo-drive');
 } else {
